@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getMailVideo } from '$lib/frontend/mailvideo-embed';
+	import { getAppMailVideo } from '$lib/frontend/mailvideo-embed';
 	import ResponseView from '$lib/ResponseView.svelte';
 	import type {
 		MailVideoEmbedInterface,
@@ -13,7 +13,7 @@
 
 	let initialized = false;
 	onMount(async () => {
-		mailvideo = await getMailVideo();
+		mailvideo = await getAppMailVideo();
 		await mailvideo.openPlatform({
 			divElement: customContainer,
 		});
@@ -21,7 +21,7 @@
 	});
 
 	const openIframe = async () => {
-		mailvideo = await getMailVideo();
+		mailvideo = await getAppMailVideo();
 		[response] = await mailvideo.pickVideo();
 	};
 </script>

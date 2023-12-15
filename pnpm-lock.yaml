@@ -9,8 +9,8 @@ dependencies:
     specifier: 0.0.3
     version: 0.0.3
   '@mailvideo/embed':
-    specifier: 1.0.0-beta.2
-    version: 1.0.0-beta.2
+    specifier: 1.0.0-beta.3
+    version: 1.0.0-beta.3
   '@supabase/supabase-js':
     specifier: ^2.39.0
     version: 2.39.0
@@ -363,8 +363,8 @@ packages:
     resolution: {integrity: sha512-ylkrHZGXyHtYvGo8gVfjwTsHmfpmgaEicJDtcnlNYrLYG5QLWcmspoa7xUJwDyFStYaeO5QFtfbgPkD2RaPEtw==}
     dev: false
 
-  /@mailvideo/embed@1.0.0-beta.2:
-    resolution: {integrity: sha512-4wC82xQlPPb0pmYUQVuqefZJ3OMSWzP4CL+3P6oVhA3YV6lHSGmG1kEWwqooAOBgaE/K6VBTSQl/L5JvL9VHhw==}
+  /@mailvideo/embed@1.0.0-beta.3:
+    resolution: {integrity: sha512-4L8geeTrcykOtf1tmDh5+tEgNvTz9GSgeovrXJUGP2i5meY39MBNWCJ+ZagPTHq1ufY4zO2Qa9bqjOzwsi1i+A==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:

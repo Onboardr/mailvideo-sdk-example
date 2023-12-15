@@ -1,4 +1,7 @@
-import { PUBLIC_MAILVIDEO_PUBLISHABLE_KEY } from '$env/static/public';
+import {
+	PUBLIC_MAILVIDEO_PUBLISHABLE_KEY,
+	PUBLIC_MAILVIDEO_PUBLISHABLE_LOCAL_KEY,
+} from '$env/static/public';
 import { loadMailVideo } from '@mailvideo/embed';
 
 const getJWT = async () => {
@@ -49,14 +52,49 @@ export const convertValue = (value: string | null) => {
 	return value;
 };
 
-export const getMailVideo = async () => {
+/**
+ * Get the MailVideo instance for the pwa.
+ *
+ * This will load the MailVideo instance with the tenantId and accountId from the URL query parameters.
+ * @returns The MailVideo instance
+ */
+export const getAppMailVideo = async () => {
 	const jwt = await getJWT();
-	console.log('jwt', jwt);
+
 	const mailvideo = await loadMailVideo({
-		publishableKey: PUBLIC_MAILVIDEO_PUBLISHABLE_KEY,
+		publishableKey: getPublishableKey(),
 		jwt,
 		type: 'whiteLabel',
 		verbose: import.meta.env.DEV,
 	});
 	return mailvideo;
+};
+
+/**
+ * Get the MailVideo instance for the share page.
+ *
+ * This will not login the user, but will allow them to view the video.
+ * @returns The MailVideo instance
+ */
+export const getShareMailVideo = async () => {
+	const mailvideo = await loadMailVideo({
+		publishableKey: getPublishableKey(),
+		type: 'view',
+		verbose: import.meta.env.DEV,
+	});
+	return mailvideo;
+};
+
+const getPublishableKey = () => {
+	const searchParams = new URLSearchParams(window.location.search);
+	const publishableKey = searchParams.get('publishableKey');
+	if (publishableKey) {
+		return publishableKey;
+	}
+
+	if (searchParams.get('local')) {
+		return PUBLIC_MAILVIDEO_PUBLISHABLE_LOCAL_KEY;
+	}
+
+	return PUBLIC_MAILVIDEO_PUBLISHABLE_KEY;
 };
