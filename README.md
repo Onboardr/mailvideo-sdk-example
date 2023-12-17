@@ -46,8 +46,8 @@ pnpm dev
 
 ### API Routes
 
-1. `src/routes/api/get-mailvideo-jwt/+server.ts`: Generates JWT for MailVideo authentication.
-2. `src/routes/api/mailvideo-webhook/+server.ts`: Handles incoming webhooks from MailVideo.
+1. `src/routes/api/jwt/+server.ts`: Generates JWT for MailVideo authentication.
+2. `src/routes/api/webhook/+server.ts`: Handles incoming webhooks from MailVideo.
 
 ### Client-Side
 
