@@ -36,7 +36,7 @@ The `mailvideo-sdk-example` project demonstrates the usage of `@mailvideo/backen
     pnpm install
     ```
 
-3. Set up environment variables by copying the `.env.example` file to `.env` and filling in your MailVideo credentials.
+3. Set up environment variables by copying the `.env.example` file to `.env` and filling in your credentials.
 
 ### Running the Project
 

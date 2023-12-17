@@ -1,7 +1,4 @@
-import {
-	PUBLIC_MAILVIDEO_PUBLISHABLE_KEY,
-	PUBLIC_MAILVIDEO_PUBLISHABLE_LOCAL_KEY,
-} from '$env/static/public';
+import { PUBLIC_MAILVIDEO_PUBLISHABLE_KEY } from '$env/static/public';
 import { loadMailVideo } from '@mailvideo/embed';
 
 const getJWT = async () => {
@@ -114,10 +111,6 @@ const getPublishableKey = () => {
 	const publishableKey = searchParams.get('publishableKey');
 	if (publishableKey) {
 		return publishableKey;
-	}
-
-	if (searchParams.get('local')) {
-		return PUBLIC_MAILVIDEO_PUBLISHABLE_LOCAL_KEY;
 	}
 
 	return PUBLIC_MAILVIDEO_PUBLISHABLE_KEY;
