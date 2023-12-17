@@ -16,14 +16,14 @@ export const POST: RequestHandler = async ({ request }) => {
 			signature,
 			secret: MAILVIDEO_WEBHOOK_SECRET,
 			actions: {
-				'video-processed-success': async (payload) => {
-					console.log('video-processed-success', payload);
+				'video.process.success': async (payload) => {
+					console.log('video processed success', payload);
 				},
-				'video-processed-failed': async (payload) => {
-					console.log('video-processed-failed', payload);
+				'video.process.failed': async (payload) => {
+					console.log('video processed failed', payload);
 				},
-				'video-viewed': async (payload) => {
-					console.log('video-viewed', payload);
+				'video.viewed': async (payload) => {
+					console.log('video viewed', payload);
 					createVideoHistory({
 						videoId: payload.videoId,
 						videoTitle: payload.videoTitle,

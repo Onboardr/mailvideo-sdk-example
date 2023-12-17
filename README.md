@@ -24,14 +24,18 @@ The `mailvideo-sdk-example` project demonstrates the usage of `@mailvideo/backen
 ### Installation
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/your-org/mailvideo-sdk-example.git
     cd mailvideo-sdk-example
     ```
+
 2. Install dependencies:
+
     ```bash
     pnpm install
     ```
+
 3. Set up environment variables by copying the `.env.example` file to `.env` and filling in your MailVideo credentials.
 
 ### Running the Project
@@ -61,7 +65,6 @@ pnpm dev
 -   `MAILVIDEO_SECRET`: Your MailVideo secret key.
 -   `PUBLIC_MAILVIDEO_PUBLISHABLE_KEY`: Your MailVideo publishable key.
 -   `MAILVIDEO_WEBHOOK_SECRET`: Your MailVideo webhook secret.
-
 
 ## Support
 

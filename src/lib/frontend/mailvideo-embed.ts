@@ -6,13 +6,37 @@ import { loadMailVideo } from '@mailvideo/embed';
 
 const getJWT = async () => {
 	const { tenantId, accountId } = getMailVideoOptionsFromURL();
-	const response = await fetch('/api/get-mailvideo-jwt', {
+	const response = await fetch('/api/jwt', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify({ tenantId, accountId }),
 	});
+	if (!response.ok) {
+		throw new Error(`Error generating JWT: ${response.statusText}`);
+	}
+
+	const jwt = await response.text();
+	return jwt;
+};
+
+export const startVideoProcess = async (options: {
+	inputPath: string;
+	videoTitle: string;
+}) => {
+	const { inputPath, videoTitle } = options;
+	const { tenantId, accountId } = getMailVideoOptionsFromURL();
+	const response = await fetch('/api/process', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({ inputPath, accountId, tenantId, videoTitle }),
+	});
+	if (!response.ok) {
+		throw new Error(`Error startVideoProcess: ${response.statusText}`);
+	}
 	const jwt = await response.text();
 	return jwt;
 };
