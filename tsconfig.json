@@ -9,5 +9,11 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true
-	}
+	},
+	"include": [
+		".svelte-kit/ambient.d.ts",
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.svelte"
+	]
 }

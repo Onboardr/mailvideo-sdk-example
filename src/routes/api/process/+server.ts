@@ -40,11 +40,11 @@ export const POST: RequestHandler = async ({ request }) => {
 			videoTitle,
 		} as const;
 
-		console.log('processVideo:options', options);
+		console.log('startVideoProcess:options', options);
 
-		const { videoId } = await mailvideo.processVideo(options);
+		const { videoId } = await mailvideo.startVideoProcess(options);
 
-		console.log('videoId', videoId);
+		console.log('startVideoProcess:videoId', videoId);
 
 		return text(videoId);
 	} catch (e) {
