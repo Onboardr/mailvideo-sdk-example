@@ -85,8 +85,8 @@ export const getAppMailVideo = async () => {
 	const mailvideo = await loadMailVideo({
 		publishableKey: getPublishableKey(),
 		jwt,
-		type: 'whiteLabel',
-		verbose: import.meta.env.DEV,
+		type: 'jwtAuthenticated',
+		verbose: true,
 	});
 	return mailvideo;
 };
@@ -101,7 +101,7 @@ export const getShareMailVideo = async () => {
 	const mailvideo = await loadMailVideo({
 		publishableKey: getPublishableKey(),
 		type: 'view',
-		verbose: import.meta.env.DEV,
+		verbose: true,
 	});
 	return mailvideo;
 };

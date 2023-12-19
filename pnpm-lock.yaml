@@ -9,11 +9,11 @@ dependencies:
     specifier: ^3.476.0
     version: 3.476.0
   '@mailvideo/backend':
-    specifier: ^0.0.9
-    version: 0.0.9
+    specifier: ^0.0.91
+    version: 0.0.91
   '@mailvideo/embed':
-    specifier: 1.0.0-beta.5
-    version: 1.0.0-beta.5
+    specifier: 1.0.0-beta.6
+    version: 1.0.0-beta.6
 
 devDependencies:
   '@sveltejs/adapter-auto':
@@ -949,12 +949,12 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@mailvideo/backend@0.0.9:
-    resolution: {integrity: sha512-FqAzCQI04u877CoA97lIue9vrh06U+s8ayT1y+J85c99Cn1nsn9gM/aLRJ54/mkjhgxmHhR7g5Sj2XJ4s+vPpw==}
+  /@mailvideo/backend@0.0.91:
+    resolution: {integrity: sha512-nXV7FXCBJBXFXsndZLyI4yPbCW/HeszOMVFeMJe6XVc/9qI0HpECuvljLeXlDIFf+gSHGyM9KChqH4oLP0qDkg==}
     dev: false
 
-  /@mailvideo/embed@1.0.0-beta.5:
-    resolution: {integrity: sha512-IQ50vjrHrAgQao9QM8mIRl6f2y+bRsBMHM7sbGDrkMTp/myt2urUjRtB09CwALHy2vYsBrbvsYIlXUVR9l6lhQ==}
+  /@mailvideo/embed@1.0.0-beta.6:
+    resolution: {integrity: sha512-LfrXEP+RwvCcjgybwqo7VkHOyg8rpLHMn+GUreYHozkNwLsJUrFAtWfbT+hUocw2coPKAmayZqmHX6IjtTeGbA==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:

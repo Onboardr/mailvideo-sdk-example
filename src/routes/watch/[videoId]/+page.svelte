@@ -10,7 +10,7 @@
 	onMount(async () => {
 		mailvideo = await getShareMailVideo();
 		const videoId = $page.params.videoId;
-		await mailvideo.showVideo({
+		await mailvideo.showPlayer({
 			videoId,
 			divElement: customContainer,
 			viewer: {
