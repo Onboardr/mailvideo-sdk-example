@@ -6,7 +6,8 @@
 		PUBLIC_AWS_ACCESS_KEY_ID,
 		PUBLIC_AWS_SECRET_ACCESS_KEY,
 	} from '$env/static/public';
-	import { startVideoProcess } from '$lib/frontend/mailvideo-embed';
+	import { startVideoProcess } from '$lib/utils/frontend';
+
 	const client = new S3Client({
 		region: PUBLIC_AWS_BUCKET_REGION,
 		credentials: {
@@ -14,6 +15,7 @@
 			secretAccessKey: PUBLIC_AWS_SECRET_ACCESS_KEY,
 		},
 	});
+
 	let inputFile: HTMLInputElement;
 
 	const uploadFile = async (file: File) => {

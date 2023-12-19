@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { getShareMailVideo } from '$lib/frontend/mailvideo-embed';
+	import { getShareMailVideo } from '$lib/utils/frontend';
 	import { type MailVideoEmbedInterface } from '@mailvideo/embed';
 	import { onMount } from 'svelte';
 

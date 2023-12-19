@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { getAppMailVideo } from '$lib/frontend/mailvideo-embed';
-	import ResponseView from '$lib/ResponseView.svelte';
+	import { getAppMailVideo } from '$lib/utils/frontend';
+	import ResponseView from '$lib/components/ResponseView.svelte';
 	import type {
 		MailVideoEmbedInterface,
 		PickVideoResponse,
@@ -30,7 +30,7 @@
 
 <div
 	bind:this={customContainer}
-	style="width: 100%; height: 500px; border: 1px solid black; margin-top: 20px; margin-bottom: 20px;" />
+	style="width: 100%; height: 900px; border: 1px solid black; margin-top: 20px; margin-bottom: 20px;" />
 
 {#if response}
 	<ResponseView response={response} />

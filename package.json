@@ -7,8 +7,7 @@
 		"preview": "vite preview",
 		"lint": "eslint --ext .js,.ts,.svelte src",
 		"format": "prettier --write \"src/**/*.{js,ts,svelte}\"",
-		"validate": "tsc --noEmit",
-		"generate:types": "supabase gen types typescript --project-id hpejkflpbbschdmppevz > src/lib/types/database.types.ts "
+		"validate": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -21,16 +20,14 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
-		"supabase": "^1.123.4",
 		"svelte": "^4.2.8",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.10"
 	},
 	"dependencies": {
-		"@aws-sdk/client-s3": "^3.474.0",
+		"@aws-sdk/client-s3": "^3.476.0",
 		"@mailvideo/backend": "^0.0.9",
-		"@mailvideo/embed": "1.0.0-beta.5",
-		"@supabase/supabase-js": "^2.39.0"
+		"@mailvideo/embed": "1.0.0-beta.5"
 	}
 }

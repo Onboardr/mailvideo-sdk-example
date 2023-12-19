@@ -2,7 +2,6 @@ import { json, error } from '@sveltejs/kit';
 import { constructAndHandleMailVideoEvent } from '@mailvideo/backend';
 import { MAILVIDEO_WEBHOOK_SECRET } from '$env/static/private';
 import type { RequestHandler } from './$types';
-import { createVideoHistory } from '$lib/database';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
@@ -24,21 +23,15 @@ export const POST: RequestHandler = async ({ request }) => {
 				},
 				'video.viewed': async (payload) => {
 					console.log('video viewed', payload);
-					createVideoHistory({
-						videoId: payload.videoId,
-						videoTitle: payload.videoTitle,
-						viewerEmail: payload.viewer.email,
-					});
 				},
 			},
 		});
 
-		// Return the JWT in the response
 		return json({
 			success: true,
 		});
 	} catch (e) {
-		console.error('Error generating JWT:', e);
+		console.error('Error handling mailvideo webhook', e);
 		error(500, 'Internal Server Error');
 	}
 };

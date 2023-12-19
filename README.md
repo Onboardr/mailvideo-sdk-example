@@ -56,15 +56,12 @@ pnpm dev
 ### Client-Side
 
 1. `src/routes/+page.svelte`: Main entry page with MailVideo integration.
-2. `src/routes/watch/[videoId]/+page.svelte`: Page to view a specific MailVideo.
-3. `src/lib/frontend/mailvideo-embed.ts`: Utility functions for embedding MailVideo on the client side.
-4. `src/lib/server/mailvideo-backend.ts`: Backend utility for MailVideo functionalities.
+1. `src/routes/upload/+page.svelte`: Page to upload a custom video to MailVideo.
+1. `src/routes/watch/[videoId]/+page.svelte`: Page to view a specific MailVideo.
 
-## Environment Variables
+## Type Definitions
 
--   `MAILVIDEO_SECRET`: Your MailVideo secret key.
--   `PUBLIC_MAILVIDEO_PUBLISHABLE_KEY`: Your MailVideo publishable key.
--   `MAILVIDEO_WEBHOOK_SECRET`: Your MailVideo webhook secret.
+To make ViewerData that is used in both `@mailvideo/backend` and `@mailvideo/embed` strongly typed create a type definition file `src/types/mailvideo.d.ts`. Remember to include this file in your `tsconfig.json` file.
 
 ## Support
 

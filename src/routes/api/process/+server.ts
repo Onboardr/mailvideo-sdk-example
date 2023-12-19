@@ -1,4 +1,4 @@
-import { mailvideo } from '$lib/server/mailvideo-backend';
+import { mailvideo } from '$lib/utils/backend';
 import { text, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
@@ -48,7 +48,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		return text(videoId);
 	} catch (e) {
-		console.error('Error generating JWT:', e);
+		console.error('Error starting video process', e);
 		error(500, 'Internal Server Error');
 	}
 };
