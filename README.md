@@ -13,6 +13,7 @@ The `mailvideo-sdk-example` project demonstrates the usage of `@mailvideo/backen
 -   Handling MailVideo webhooks.
 -   Embedding MailVideo in a SvelteKit application.
 -   Picking a video from MailVideo platform.
+-   Uploading a custom video to MailVideo platform.
 
 ## Getting Started
 
