@@ -11,13 +11,11 @@
 	let customContainer: HTMLDivElement;
 	let response: PickVideoResponse | undefined;
 
-	let initialized = false;
 	onMount(async () => {
 		mailvideo = await getAppMailVideo();
 		await mailvideo.openPlatform({
 			divElement: customContainer,
 		});
-		initialized = true;
 	});
 
 	const openIframe = async () => {
