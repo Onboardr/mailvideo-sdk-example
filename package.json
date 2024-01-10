@@ -10,24 +10,24 @@
 		"validate": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.1",
-		"@sveltejs/kit": "^2.0.4",
+		"@sveltejs/adapter-auto": "^3.1.0",
+		"@sveltejs/kit": "^2.1.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
-		"@typescript-eslint/eslint-plugin": "^6.15.0",
-		"@typescript-eslint/parser": "^6.15.0",
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"@typescript-eslint/parser": "^6.18.1",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte3": "^4.0.0",
+		"eslint-plugin-svelte": "^2.35.1",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"svelte": "^4.2.8",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.10"
+		"vite": "^5.0.11"
 	},
 	"dependencies": {
-		"@aws-sdk/client-s3": "^3.477.0",
-		"@mailvideo/backend": "^0.0.92",
-		"@mailvideo/embed": "^1.0.0-beta.6"
+		"@aws-sdk/client-s3": "^3.485.0",
+		"@mailvideo/backend": "^0.1.0",
+		"@mailvideo/embed": "^1.0.0"
 	}
 }
