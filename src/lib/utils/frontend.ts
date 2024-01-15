@@ -79,7 +79,7 @@ export const convertValue = (value: string | null) => {
  * This will load the MailVideo instance with the tenantId and accountId from the URL query parameters.
  * @returns The MailVideo instance
  */
-export const getAppMailVideo = async () => {
+export const getAppMailVideo = async (preload?: true) => {
 	const jwt = await getJWT();
 
 	const mailvideo = await loadMailVideo({
@@ -87,6 +87,7 @@ export const getAppMailVideo = async () => {
 		jwt,
 		type: 'jwtAuthenticated',
 		verbose: true,
+		preload,
 	});
 	return mailvideo;
 };

@@ -7,19 +7,12 @@
 	} from '@mailvideo/embed';
 	import { onMount } from 'svelte';
 
-	let mailvideoPlatform: MailVideoEmbedJWTAuthenticatedInterface | undefined;
 	let mailvideoPicker: MailVideoEmbedJWTAuthenticatedInterface | undefined;
 
-	let customContainer: HTMLDivElement;
 	let response: PickVideoResponse | undefined;
 
 	onMount(async () => {
-		mailvideoPlatform = await getAppMailVideo();
 		mailvideoPicker = await getAppMailVideo(true);
-
-		await mailvideoPlatform.openPlatform({
-			divElement: customContainer,
-		});
 	});
 
 	const openIframe = async () => {
@@ -32,10 +25,6 @@
 </script>
 
 <button on:click={openIframe}>Pick MailVideo</button>
-
-<div
-	bind:this={customContainer}
-	style="width: 100%; height: 900px; border: 1px solid black; margin-top: 20px; margin-bottom: 20px;" />
 
 {#if response}
 	<ResponseView response={response} />
