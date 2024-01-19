@@ -23,11 +23,11 @@
 		"svelte": "^4.2.9",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.11"
+		"vite": "^5.0.12"
 	},
 	"dependencies": {
 		"@aws-sdk/client-s3": "^3.495.0",
 		"@mailvideo/backend": "^0.1.0",
-		"@mailvideo/embed": "^1.1.0-beta.4"
+		"@mailvideo/embed": "1.1.0-beta.5"
 	}
 }
