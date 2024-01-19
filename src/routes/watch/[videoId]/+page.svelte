@@ -1,17 +1,21 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { getShareMailVideo } from '$lib/utils/frontend';
-	import { type MailVideoEmbedInterface } from '@mailvideo/embed';
+	import { type MailVideoEmbedViewInterface } from '@mailvideo/embed';
 	import { onMount } from 'svelte';
 
-	let mailvideo: MailVideoEmbedInterface | undefined;
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+
+	const { video } = data;
+	let mailvideo: MailVideoEmbedViewInterface | undefined;
 	let customContainer: HTMLDivElement;
 
 	onMount(async () => {
 		mailvideo = await getShareMailVideo();
-		const videoId = $page.params.videoId;
 		await mailvideo.showPlayer({
-			videoId,
+			videoId: video.videoId,
+			thumbnailURL: video.thumbnailURL,
 			divElement: customContainer,
 			viewer: {
 				email: 'external-viewer@test.test',

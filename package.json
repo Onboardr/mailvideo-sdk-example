@@ -11,23 +11,23 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.1.0",
-		"@sveltejs/kit": "^2.3.2",
+		"@sveltejs/kit": "^2.4.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
-		"@typescript-eslint/eslint-plugin": "^6.18.1",
-		"@typescript-eslint/parser": "^6.18.1",
+		"@typescript-eslint/eslint-plugin": "^6.19.0",
+		"@typescript-eslint/parser": "^6.19.0",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"prettier": "^3.2.2",
+		"prettier": "^3.2.4",
 		"prettier-plugin-svelte": "^3.1.2",
-		"svelte": "^4.2.8",
+		"svelte": "^4.2.9",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.11"
 	},
 	"dependencies": {
-		"@aws-sdk/client-s3": "^3.490.0",
+		"@aws-sdk/client-s3": "^3.495.0",
 		"@mailvideo/backend": "^0.1.0",
-		"@mailvideo/embed": "1.1.0-beta.3"
+		"@mailvideo/embed": "^1.1.0-beta.4"
 	}
 }
