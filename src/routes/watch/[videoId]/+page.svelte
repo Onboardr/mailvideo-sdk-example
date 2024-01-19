@@ -26,4 +26,4 @@
 
 <div
 	bind:this={customContainer}
-	style="width: 100%; height: 500px; border: 1px solid black; margin-top: 20px; margin-bottom: 20px;" />
+	style="width: 500px; height: 500px; margin: 20px" />
