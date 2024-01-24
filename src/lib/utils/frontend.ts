@@ -102,7 +102,7 @@ export const getShareMailVideo = async () => {
 	const mailvideo = await loadMailVideo({
 		publishableKey: getPublishableKey(),
 		type: 'view',
-		verbose: true,
+		logLevel: 'DEBUG',
 	});
 	return mailvideo;
 };
