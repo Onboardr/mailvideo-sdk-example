@@ -1,7 +1,7 @@
 import { PUBLIC_MAILVIDEO_PUBLISHABLE_KEY } from '$env/static/public';
 import { loadMailVideo } from '@mailvideo/embed';
 
-const getJWT = async () => {
+export const getJWT = async () => {
 	const { tenantId, accountId } = getMailVideoOptionsFromURL();
 	const response = await fetch('/api/jwt', {
 		method: 'POST',
@@ -107,7 +107,7 @@ export const getShareMailVideo = async () => {
 	return mailvideo;
 };
 
-const getPublishableKey = () => {
+export const getPublishableKey = () => {
 	const searchParams = new URLSearchParams(window.location.search);
 	const publishableKey = searchParams.get('publishableKey');
 	if (publishableKey) {
